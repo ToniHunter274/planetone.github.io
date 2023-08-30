@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="images/favicon-32x32.png">
+	<title>FRONTEND MENTOR | PLANETS FACTS</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;700&family=Fraunces:wght@700&family=Inter:wght@300;500;600&family=Karla:wght@400;700&family=Montserrat:wght@300;500;700&family=Open+Sans:wght@300;400&family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;1,200&family=Poppins:wght@100;200;500;600;700&family=Questrial&family=Roboto+Condensed:wght@300;400;700&family=Rubik:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<nav style="padding: 15px;">
+			<ul>
+				<li>THE PLANET</li>
+				<div style="float: right;">
+					<li><a href ="mercury.html">MERCURY</a></li>
+					<li><a href ="venus.html">VENUS</a></li>
+					<li><a href ="../index.html">EARTH</a></li>
+					<li><a href = "mars.html">MARS</a></li>
+					<li><a href = "jupiter.html">JUPITER</a></li>
+					<li><a href ="saturn.html">SATURN</a></li>
+					<li><a href = "uranus.html">URANUS</a></li>
+					<li><a href ="neptune.html">NEPTUNE</a></li>
+				</div>
+			</ul>
+		</nav>
+	</header>
+
+	<hr>
+	<main>
+		<div style="margin-inline-start:150px;">
+			<img src="assets/planet-jupiter.svg" alt="jupiter-structure" id="pixs">
+		</div>
+
+		<aside id="m-side">
+			<h1>JUPITER</h1>
+			<p style="line-height: 25px;" id="change">Jupiter is the fifth planet from the Sun and the largest in the Solar System.<br> It is a gas giant with a mass two and a half times that of all<br> the other planets in the Solar System combined, <br>but less than one-thousandth the mass of the Sun.
+			</p>
+			<br>
+			<span id="goto">Source : <a href="https://en.wikipedia.org/wiki/Jupiter">Wikipedia</a></span>
+			<br>
+			<button class="ab" id="f-click">&nbsp;01 &nbsp;&nbsp;&nbsp;<strong>OVERVIEW</strong></button>
+			<br>
+			<button class="d-button" id="s-click">&nbsp;02 &nbsp;&nbsp;&nbsp;<strong>INTERNAL STRUCTURE</strong></button>
+			<br>
+			<button class="d-button" id="t-click">&nbsp;03 &nbsp;&nbsp;&nbsp;<strong>SURFACE GEOLOGY</strong></button>
+		</aside>
+	</main>
+
+	<section class="m-xter">
+		<div class="xter">
+			<span>ROTATION TIME</span>
+			<br>
+			<h1>9.93 DAYS</h1>
+		</div>
+		<div class="xter">
+			<span>REVOLUTION TIME</span>
+			<br>
+			<h1>11.86 Years</h1>
+		</div>
+		<div class="xter">
+			<span>RADIUS</span>
+			<br>
+			<h1>69,911 KM</h1>
+		</div>
+		<div class="xter">
+			<span>AVERAGE TEMP.</span>
+			<br>
+			<h1>-108 °c</h>
+		</div>
+	</section>
+
+	<script>
+		const overview = document.getElementById("f-click");
+		const internal = document.getElementById("s-click");
+		const geo = document.getElementById("t-click");
+		const next = document.getElementById("change");
+		const struc = document.getElementById("pixs");
+
+		overview.addEventListener("click", function(){
+			change.innerHTML = "Jupiter is the fifth planet from the Sun and the largest in the Solar System.<br> It is a gas giant with a mass two and a half times that of all<br> the other planets in the Solar System combined, <br>but less than one-thousandth the mass of the Sun.";
+
+			overview.style.background = "rgb(111,46,214)";
+			internal.style.background = "none";
+			geo.style.background = "none";
+			pixs.src = "assets/planet-jupiter.svg";
+		});
+
+		internal.addEventListener("click", function(){
+			change.innerHTML = "When the Juno arrived in 2016, it found that <br> Jupiter has a very diffuse core that mixes into its mantle.<br> A possible cause is an impact from a planet of <br> about ten Earth masses a few million years after Jupiter's <br> formation, which would have disrupted an originally solid Jovian core.";
+
+			overview.style.background = "none";
+			internal.style.background = "rgb(111,46,214)";
+			geo.style.background = "none";
+			pixs.src = "assets/planet-jupiter-internal.svg";
+		});
+
+		geo.addEventListener("click", function(){
+			change.innerHTML = "The best known feature of Jupiter is the Great Red<br> Spot, a persistent anticyclonic storm located 22° south of the<br> equator. It is known to have existed since at least <br> 1831, and possibly since 1665.";
+
+			overview.style.background = "none";
+			internal.style.background = "none";
+			geo.style.background = "rgb(111,46,214)";
+			pixs.src = "assets/geology-jupiter.png";
+		});
+
+	</script>
+</body>
+</html>

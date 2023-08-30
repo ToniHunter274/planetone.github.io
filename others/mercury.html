@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="images/favicon-32x32.png">
+	<title>FRONTEND MENTOR | PLANETS FACTS</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;700&family=Fraunces:wght@700&family=Inter:wght@300;500;600&family=Karla:wght@400;700&family=Montserrat:wght@300;500;700&family=Open+Sans:wght@300;400&family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;1,200&family=Poppins:wght@100;200;500;600;700&family=Questrial&family=Roboto+Condensed:wght@300;400;700&family=Rubik:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<nav style="padding: 15px;">
+			<ul>
+				<li>THE PLANET</li>
+				<div style="float: right;">
+					<li><a href ="mercury.html">MERCURY</a></li>
+					<li><a href ="venus.html">VENUS</a></li>
+					<li><a href ="../index.html">EARTH</a></li>
+					<li><a href = "mars.html">MARS</a></li>
+					<li><a href = "jupiter.html">JUPITER</a></li>
+					<li><a href ="saturn.html">SATURN</a></li>
+					<li><a href = "uranus.html">URANUS</a></li>
+					<li><a href ="neptune.html">NEPTUNE</a></li>
+				</div>
+			</ul>
+		</nav>
+	</header>
+
+	<hr>
+	<main>
+		<div style="margin-inline-start:150px; margin-block-start:100px;">
+			<img src="assets/planet-mercury.svg" alt="mercury-structure" id="pixs">
+		</div>
+
+		<aside style="margin-inline-end:150px;" id="m-side">
+			<h1>MERCURY</h1>
+			<p style="line-height: 25px;" id="change">Mercury is the smallest planet in the Solar System and<br> the closest to the Sun. Its orbit around  the Sun takes <br>87.97 Earth days, the shortest of all the Sun's planets.<br> Mercury is one of four terrestrial planets in the Solar System,<br> and is a rocky body like Earth.
+			</p>
+			<br>
+			<span id="goto">Source : <a href="#">Wikipedia</a></span>
+			<br>
+			<button class="ab" id="f-click">&nbsp;01 &nbsp;&nbsp;&nbsp;<strong>OVERVIEW</strong></button>
+			<br>
+			<button class="d-button" id="s-click">&nbsp;02 &nbsp;&nbsp;&nbsp;<strong>INTERNAL STRUCTURE</strong></button>
+			<br>
+			<button class="d-button" id="t-click">&nbsp;03 &nbsp;&nbsp;&nbsp;<strong>SURFACE GEOLOGY</strong></button>
+		</aside>
+	</main>
+
+	<section class="m-xter">
+		<div class="xter">
+			<span>ROTATION TIME</span>
+			<br>
+			<h1>58.6 DAYS</h1>
+		</div>
+		<div class="xter">
+			<span>REVOLUTION TIME</span>
+			<br>
+			<h1>87.97 DAYS</h1>
+		</div>
+		<div class="xter">
+			<span>RADIUS</span>
+			<br>
+			<h1>2,439.7 KM</h1>
+		</div>
+		<div class="xter">
+			<span>AVERAGE TEMP.</span>
+			<br>
+			<h1>430 °c</h>
+		</div>
+	</section>
+
+	<script>
+		const overview = document.getElementById("f-click");
+		const internal = document.getElementById("s-click");
+		const geo = document.getElementById("t-click");
+		const next = document.getElementById("change");
+		const struc = document.getElementById("pixs");
+
+		overview.addEventListener("click", function(){
+			change.innerHTML = "Mercury is the smallest planet in the Solar<br> System and the closest to the Sun. Its <br>orbit around the Sun takes 87.97 Earth days,<br> the shortest of all the Sun's planets. Mercury<br> is one of four terrestrial planets in the Solar System,<br> and is a rocky body like Earth.";
+
+			overview.style.background = "rgb(111,46,214)";
+			internal.style.background = "none";
+			geo.style.background = "none";
+			pixs.src = "assets/planet-mercury.svg";
+		});
+
+		internal.addEventListener("click", function(){
+			change.innerHTML = "Mercury appears to have a solid silicate crust and mantle <br>overlying a solid, iron sulfide outer core layer, a deeper <br>liquid core layer, and a solid inner core. The<br> planet's density is the second highest in the Solar System<br> at 5.427 g/cm3 , only slightly less than Earth's density.";
+
+			overview.style.background = "none";
+			internal.style.background = "rgb(111,46,214)";
+			geo.style.background = "none";
+			pixs.src = "assets/planet-mercury-internal.svg";
+		});
+
+		geo.addEventListener("click", function(){
+			change.innerHTML = "Mercury's surface is similar in appearance to that of the<br> Moon, showing extensive mare-like plains and heavy<br> cratering, indicating that it has been geologically inactive <br> for billions of years. It is more heterogeneous than <br> either Mars's or the Moon’s.";
+
+			overview.style.background = "none";
+			internal.style.background = "none";
+			geo.style.background = "rgb(111,46,214)";
+			pixs.src = "assets/geology-mercury.png";
+		});
+
+	</script>
+</body>
+</html>

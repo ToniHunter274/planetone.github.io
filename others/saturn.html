@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="images/favicon-32x32.png">
+	<title>FRONTEND MENTOR | PLANETS FACTS</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;700&family=Fraunces:wght@700&family=Inter:wght@300;500;600&family=Karla:wght@400;700&family=Montserrat:wght@300;500;700&family=Open+Sans:wght@300;400&family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;1,200&family=Poppins:wght@100;200;500;600;700&family=Questrial&family=Roboto+Condensed:wght@300;400;700&family=Rubik:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<nav style="padding: 15px;">
+			<ul>
+				<li>THE PLANET</li>
+				<div style="float: right;">
+					<li><a href ="mercury.html">MERCURY</a></li>
+					<li><a href ="venus.html">VENUS</a></li>
+					<li><a href ="../index.html">EARTH</a></li>
+					<li><a href = "mars.html">MARS</a></li>
+					<li><a href = "jupiter.html">JUPITER</a></li>
+					<li><a href ="saturn.html">SATURN</a></li>
+					<li><a href = "uranus.html">URANUS</a></li>
+					<li><a href ="neptune.html">NEPTUNE</a></li>
+				</div>
+			</ul>
+		</nav>
+	</header>
+
+	<hr>
+	<main>
+		<div style="margin-inline-start:100px;">
+			<img src="assets/planet-saturn.svg" alt="saturn-structure" id="pixs">
+		</div>
+
+		<aside style="margin-inline-end:150px;" id="m-side">
+			<h1>SATURN</h1>
+			<p style="line-height: 25px;" id="change">Saturn is the sixth planet from the Sun and the second-largest <br>in the Solar System, after Jupiter. It is a gas giant with an average <br>radius of about nine and a half times that of Earth.<br> It only has one-eighth the average density of Earth.
+			</p>
+			<br>
+			<span id="goto">Source : <a href="https://en.wikipedia.org/wiki/Saturn">Wikipedia</a></span>
+			<br>
+			<button class="ab" id="f-click">&nbsp;01 &nbsp;&nbsp;&nbsp;<strong>OVERVIEW</strong></button>
+			<br>
+			<button class="d-button" id="s-click">&nbsp;02 &nbsp;&nbsp;&nbsp;<strong>INTERNAL STRUCTURE</strong></button>
+			<br>
+			<button class="d-button" id="t-click">&nbsp;03 &nbsp;&nbsp;&nbsp;<strong>SURFACE GEOLOGY</strong></button>
+		</aside>
+	</main>
+
+	<section class="m-xter">
+		<div class="xter">
+			<span>ROTATION TIME</span>
+			<br>
+			<h1>10.8 HOURS</h1>
+		</div>
+		<div class="xter">
+			<span>REVOLUTION TIME</span>
+			<br>
+			<h1>29.46 YEARS</h1>
+		</div>
+		<div class="xter">
+			<span>RADIUS</span>
+			<br>
+			<h1>58,232 KM</h1>
+		</div>
+		<div class="xter">
+			<span>AVERAGE TEMP.</span>
+			<br>
+			<h1>-138 °c</h>
+		</div>
+	</section>
+
+	<script>
+		const overview = document.getElementById("f-click");
+		const internal = document.getElementById("s-click");
+		const geo = document.getElementById("t-click");
+		const next = document.getElementById("change");
+		const struc = document.getElementById("pixs");
+
+		overview.addEventListener("click", function(){
+			change.innerHTML = "Saturn is the sixth planet from the Sun and the<br> second-largest in the Solar System, after Jupiter.<br> It is a gas giant with an average radius of about<br> nine and a half times that of Earth. It only has<br> one-eighth the average density of Earth.";
+
+			overview.style.background = "rgb(111,46,214)";
+			internal.style.background = "none";
+			geo.style.background = "none";
+			pixs.src = "assets/planet-saturn.svg";
+		});
+
+		internal.addEventListener("click", function(){
+			change.innerHTML = "Despite consisting mostly of hydrogen and helium,<br> most of Saturn's mass is not in the gas phase,<br> because hydrogen becomes a non-ideal liquid when the<br> density is above 0.01 g/cm3, which is reached<br> at a radius containing 99.9% of Saturn's mass.";
+
+			overview.style.background = "none";
+			internal.style.background = "rgb(111,46,214)";
+			geo.style.background = "none";
+			pixs.src = "assets/planet-saturn-internal.svg";
+		});
+
+		geo.addEventListener("click", function(){
+			change.innerHTML = "The outer atmosphere of Saturn contains 96.3%<br> molecular hydrogen and 3.25% helium by volume. The<br> planet's most famous feature is its prominent ring system,<br> which is composed mostly of ice particles with a smaller<br> amount of rocky debris and dust.";
+
+			overview.style.background = "none";
+			internal.style.background = "none";
+			geo.style.background = "rgb(111,46,214)";
+			pixs.src = "assets/geology-saturn.png";
+		});
+
+	</script>
+</body>
+</html>
